@@ -27,17 +27,17 @@ Cada um dos cenários terá uma explicação mais detalhada no [Readme]() que co
 
 ## Arquitetura de pasta do projeto
 ``` mermaid
-flowchart TD
+flowchart LR
 
 A[Automatizar The Internet] --> B[Automatizar.TheInternet]
 A --> C[.gitignore]
 A --> D[README.md]
 A --> E[src]
 E --> F[Automatizar.TheInternet]
-E --> G[Infrastructure]
-E --> H[Scenarios]
-E --> I[Program.cs]
-E --> J[Automatizar.TheInternet.csproj]
+F --> G[Infrastructure]
+F --> H[Scenarios]
+F --> I[Program.cs]
+F --> J[Automatizar.TheInternet.csproj]
 G --> K[PlaywrightFactory.cs]
 H --> L[ABTest.cs]
 ```
