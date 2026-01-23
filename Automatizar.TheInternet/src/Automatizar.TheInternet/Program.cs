@@ -15,7 +15,12 @@ namespace Automatizar.TheInternet
             // Cria a instância do cenário AB Test.
             var abTest = new ABTest();
             // Executa o cenário AB Test.
-            await abTest.ExecuteAbTestAsync(page);
+            await abTest.ExecuteAsync(page);
+
+            // Cria a instância do cenário Add Remove Elements.
+            var AddRemoveElements = new AddRemoveElements();
+            // Executa o cenário Add Remove Elements.
+            await AddRemoveElements.ExecuteAsync(page);
 
             Console.ReadKey();
         }

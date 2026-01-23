@@ -10,7 +10,7 @@ namespace Automatizar.TheInternet.Scenarios
     public class ABTest
     {
         // Captura as informações sobre a página e realiza o test.
-        public async Task ExecuteAbTestAsync(IPage page)
+        public async Task ExecuteAsync(IPage page)
         {
             await page.GotoAsync("https://the-internet.herokuapp.com/abtest");
 
