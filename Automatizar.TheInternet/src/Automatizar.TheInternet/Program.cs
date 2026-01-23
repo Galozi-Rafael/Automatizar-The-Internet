@@ -22,6 +22,13 @@ namespace Automatizar.TheInternet
             // Executa o cenário Add Remove Elements.
             await AddRemoveElements.ExecuteAsync(page);
 
+            // Cria página com autenticação.
+            var pageAuth = await PlaywrightFactory.CreatePageWithAuthAsync("admin", "admin");
+            // cria a instância do cenário Basic Auth.
+            var basicAuth = new BasicAuth();
+            // Executa o cenário Basic Auth.
+            await basicAuth.ExecuteAsync(pageAuth);
+
             Console.ReadKey();
         }
     }
