@@ -29,6 +29,11 @@ namespace Automatizar.TheInternet
             // Executa o cenário Basic Auth.
             await basicAuth.ExecuteAsync(pageAuth);
 
+            // Cria a instância do cenário BrokenImages
+            var brokenImages = new BrokenImages();
+            // Executa o cenário BronkenImages
+            await brokenImages.ExecuteAsync(page);
+
             Console.ReadKey();
         }
     }
