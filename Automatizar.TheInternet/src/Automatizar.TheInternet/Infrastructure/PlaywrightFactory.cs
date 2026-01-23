@@ -26,5 +26,29 @@ namespace Automatizar.TheInternet.Infrastructure
 
             return page;
         }
+
+        public static async Task<IPage> CreatePageWithAuthAsync(string username, string password)
+        {
+            var playwright = await Playwright.CreateAsync();
+
+            var browser = await playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
+            {
+                Headless = false,
+            });
+
+            // Cria um novo contexto de navegador com autenticação HTTP.
+            var context = await browser.NewContextAsync(new BrowserNewContextOptions
+            {
+                HttpCredentials = new HttpCredentials
+                {
+                    Username = username,
+                    Password = password
+                }
+            });
+
+            var page = await context.NewPageAsync();
+
+            return page;
+        }
     }
 }
