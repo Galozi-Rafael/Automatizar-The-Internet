@@ -40,4 +40,8 @@ F --> I[Program.cs]
 F --> J[Automatizar.TheInternet.csproj]
 G --> K[PlaywrightFactory.cs]
 H --> L[ABTest.cs]
+H --> M[AddRemoveElements.cs]
+H --> N[BasicAuth.cs]
+H --> O[BrokenImages.cs]
+H --> P[ChallengingDOM.cs]
 ```
