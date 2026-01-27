@@ -46,6 +46,11 @@ namespace Automatizar.TheInternet
             await tableDOM.TableExecuteAsync(page);
             await canvasDOM.CanvasExecuteAsync(page);
 
+            // Cria a instância do cenário Checkboxes
+            var checkboxes = new Checkboxes();
+            // Executa o cenário Checkboxes
+            await checkboxes.ExecuteAsync(page);
+
             Console.ReadKey();
         }
     }
