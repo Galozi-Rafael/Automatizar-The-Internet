@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Automatizar.TheInternet.Infrastructure;
 using Automatizar.TheInternet.Scenarios;
 
+
 namespace Automatizar.TheInternet
 {
     // Ponto de entrada da aplicação.
@@ -33,6 +34,17 @@ namespace Automatizar.TheInternet
             var brokenImages = new BrokenImages();
             // Executa o cenário BronkenImages
             await brokenImages.ExecuteAsync(page);
+
+            // Cria a instância do cenário ChallengingDOM
+            var challengingDOM = new ChallengingDOM();
+            var buttonsDOM = new ChallengingDOM.ButtonsDOM();
+            var tableDOM = new ChallengingDOM.TableDOM();
+            var canvasDOM = new ChallengingDOM.CanvasDOM();
+
+            // Executa o cenário ChallengingDOM
+            await buttonsDOM.ButtonsExecuteAsync(page);
+            await tableDOM.TableExecuteAsync(page);
+            await canvasDOM.CanvasExecuteAsync(page);
 
             Console.ReadKey();
         }
