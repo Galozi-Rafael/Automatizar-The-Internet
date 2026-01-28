@@ -15,9 +15,9 @@ namespace Automatizar.TheInternet
             // Cria a página do Playwright.
             var page = await PlaywrightFactory.CreatePageAsync();
             // Cria página com autenticação.
-            //var pageAuth = await PlaywrightFactory.CreatePageWithAuthAsync("admin", "admin");
+            var pageAuth = await PlaywrightFactory.CreatePageWithAuthAsync("admin", "admin");
             
-            /*
+            
             #region AB Test 
             // Cria a instância do cenário AB Test.
             var abTest = new ABTest();
@@ -32,7 +32,7 @@ namespace Automatizar.TheInternet
             await AddRemoveElements.ExecuteAsync(page);
             #endregion
 
-            #region pageAuth
+            #region BasicAuth
             
             // cria a instância do cenário Basic Auth.
             var basicAuth = new BasicAuth();
@@ -66,13 +66,20 @@ namespace Automatizar.TheInternet
             // Executa o cenário Checkboxes
             await checkboxes.ExecuteAsync(page);
             #endregion
-            */
+            
 
             #region Context Menu
             // Cria a instância do cenário Context Menu
             var contextMenu = new ContextMenu();
             // Executa o cenário Context Menu
             await contextMenu.ExecuteAsync(page);
+            #endregion
+
+            #region Digest Auth
+            // Cria a instância do cenário Digest Auth.
+            var digestAuth = new DigestAuth();
+            // Executa o cenário Digest Auth.
+            await digestAuth.ExecuteAsync(pageAuth);
             #endregion
 
             Console.ReadKey();
