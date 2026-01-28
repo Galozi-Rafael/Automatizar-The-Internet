@@ -15,7 +15,17 @@ namespace Automatizar.TheInternet.Scenarios
 
             // Captura a mensagem de sucesso da autenticação.
             var message = await page.Locator("p").InnerTextAsync();
-            Console.WriteLine($"Mensagem retornada: {message}");
+
+            if (string.IsNullOrEmpty(message))
+            {
+                Console.WriteLine("Falha ao capturar a mensagem de autenticação.");
+                return;
+            }
+            else
+            {
+                Console.WriteLine($"Mensagem retornada: {message}");
+            }
+            
 
             // Verifica se a mensagem contém o texto de sucesso.
             bool success = message.Contains("Congratulations!");

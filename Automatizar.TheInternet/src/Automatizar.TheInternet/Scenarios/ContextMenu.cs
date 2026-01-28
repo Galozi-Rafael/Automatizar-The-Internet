@@ -25,6 +25,9 @@ namespace Automatizar.TheInternet.Scenarios
             {
                 Button = MouseButton.Right
             });
+            await page.WaitForTimeoutAsync(1000);
+
+            await page.ClickAsync("text=Context Menu");
         }
     }
 }

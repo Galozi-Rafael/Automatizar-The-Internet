@@ -40,6 +40,13 @@ namespace Automatizar.TheInternet
             await basicAuth.ExecuteAsync(pageAuth);
             #endregion
 
+            #region Digest Auth
+            // Cria a instância do cenário Digest Auth.
+            var digestAuth = new DigestAuth();
+            // Executa o cenário Digest Auth.
+            await digestAuth.ExecuteAsync(pageAuth);
+            #endregion
+
             #region Broken Images
             // Cria a instância do cenário BrokenImages
             var brokenImages = new BrokenImages();
@@ -67,7 +74,6 @@ namespace Automatizar.TheInternet
             await checkboxes.ExecuteAsync(page);
             #endregion
             
-
             #region Context Menu
             // Cria a instância do cenário Context Menu
             var contextMenu = new ContextMenu();
@@ -75,11 +81,11 @@ namespace Automatizar.TheInternet
             await contextMenu.ExecuteAsync(page);
             #endregion
 
-            #region Digest Auth
-            // Cria a instância do cenário Digest Auth.
-            var digestAuth = new DigestAuth();
-            // Executa o cenário Digest Auth.
-            await digestAuth.ExecuteAsync(pageAuth);
+            #region Desappearing Elements
+            // Cria a instância do cenário Disappearing Elements
+            var desappearingElements = new DisappearingElements();
+            // Executa o cenário Disappearing Elements
+            await desappearingElements.ExecuteAsync(page);
             #endregion
 
             Console.ReadKey();
