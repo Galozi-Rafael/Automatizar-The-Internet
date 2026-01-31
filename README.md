@@ -25,6 +25,54 @@ Cada um dos cenários terá uma explicação mais detalhada no [Readme]() que co
 2. .NET;
 3. Playwright.
 
+## Checklist de cenários implementados
+
+- [x] A/B Testing
+- [x] Add/Remove Elements
+- [x] Basic Auth
+- [x] Broken Images
+- [x] Challenging DOM
+- [x] Checkboxes
+- [x] Context Menu
+- [x] Digest Authentication
+- [x] Disappearing Elements
+- [ ] Drag and Drop
+- [ ] Dropdown
+- [ ] Dynamic Content
+- [ ] Dynamic Controls
+- [ ] Dynamic Loading
+- [ ] Entry Ad
+- [ ] Exit Intent
+- [ ] File Download
+- [ ] File Upload
+- [ ] Floating Menu
+- [ ] Forgot Password
+- [ ] Form Authentication
+- [ ] Frames
+- [ ] Geolocation
+- [ ] Horizontal Slider
+- [ ] Hovers
+- [ ] Infinite Scroll
+- [ ] Inputs
+- [ ] JQuery UI Menus
+- [ ] JavaScript Alerts
+- [ ] JavaScript onload event error
+- [ ] Key Presses
+- [ ] Large & Deep DOM
+- [ ] Multiple Windows
+- [ ] Nested Frames
+- [ ] Notification Messages
+- [ ] Redirect Link
+- [ ] Secure File Download
+- [ ] Shadow DOM
+- [ ] Shifting Content
+- [ ] Slow Resources
+- [ ] Sortable Data Tables
+- [ ] Status Codes
+- [ ] Typos
+- [ ] WYSIWYG Editor
+
+
 ## Arquitetura de pasta do projeto
 ``` mermaid
 flowchart LR
